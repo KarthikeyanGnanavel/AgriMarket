@@ -1,0 +1,203 @@
+<?php include('addcrop.php') ?>
+<!DOCTYPE html>
+<html>
+<title>Farmer Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="shortcut icon" href="assets/images/aaa.png">
+<style>
+#ip1 {
+    border-radius: 18px;  
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:250px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="abc.png" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>User name</b></h4>
+    
+  </div>
+  <div class="w3-bar-block">
+    <a href="farmerpage.html" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Home</a> 
+    <a href="addcrop.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-upload fa-fw w3-margin-right"></i>ADD-CROPS</a> 
+   
+	 <a href="logout.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-gear fa-fw w3-margin-right"></i>LOGOUT</a>
+   
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+	<br>
+    <h1><b>AGRI MARKET</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      
+    </div>
+	<br>
+  </header>
+ 
+ 
+  <form class="modal-content" action="ac.php" method="post">
+    <div class="container">
+      <h1>ADD CROPS</h1>
+      <p>Please fill the Crop Details...</p>
+      <hr>
+	  <br>
+      <label for="crop"><b>Username</b></label>
+      <input id="ip1" type="text" placeholder="Enter Username" name="cropname" required>
+      </br>
+	   <br>
+      <label for="crop"><b>Crop Name</b></label>
+      <input id="ip1" type="text" placeholder="Enter Crop Name" name="cropname" required>
+      </br>
+	  
+	  <br>
+      <label for="qty"><b>Quantity (In Kgs)</b></label>
+      <input id="ip1" type="text" placeholder="Enter Quantity" name="quantity" required>
+      </br>
+      <br>	  
+      <label for="price"><b>Price (In Rs)</b></label>
+      <input id="ip1" type="text" placeholder="Enter Price per Kg " name="price" required>
+      </br>
+	  <br>
+      <label for="place"><b>Place</b></label>
+      <input id="ip1" type="text" placeholder="Enter Place" name="place" required>
+      </br>
+  
+ 
+ 
+      
+      <div class="clearfix">
+        <button  type="submit" class="signbtn">Update</button>
+</script>
+      </div>
+    </div>
+  </form>
+
+</body> 
+</html>
